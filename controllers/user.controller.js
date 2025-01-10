@@ -76,7 +76,7 @@ const forgetPassword = async (req, res) => {
       },
     });
     
-    const resetLink = `${req.protocol}://https://atg-ui.netlify.app/reset-password/${resetToken}`;
+    const resetLink = `https://atg-ui.netlify.app/reset-password/${resetToken}`;
     const mailOptions = {
       from: process.env.EMAIL,
       to: email,
