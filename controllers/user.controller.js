@@ -101,10 +101,10 @@ const forgetPassword = async (req, res) => {
 // Reset Password
 const resetPassword = async (req, res) => {
   try {
-    const { token } = req.params;
-    const { newPassword } = req.body;
+    // const { token } = req.params;
+    const { newPassword  , token} = req.body;
 
-    
+    console.log({token})
     const user = await User.findOne({
       resetToken: token,
       resetTokenExpiry: { $gt: Date.now() },
