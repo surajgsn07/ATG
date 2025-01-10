@@ -122,6 +122,7 @@ const resetPassword = async (req, res) => {
 
     res.status(200).json({ message: "Password reset successful" });
   } catch (error) {
+    console.log("error : " , error)
     res.status(500).json({ message: "Server error", error });
   }
 };
