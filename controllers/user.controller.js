@@ -2,6 +2,7 @@ const User = require("../model/User.model.js");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
+const bcrypt = require("bcrypt");
 
 // Register User
 const register = async (req, res) => {
